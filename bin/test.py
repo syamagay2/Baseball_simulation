@@ -3,7 +3,7 @@ print("Hello World")
 import sys,os
 sys.path.append(os.getcwd())
 
-from src import Game
+from src import game
 
 thisgame = Game.Game()
 thissituation = thisgame.send_runner(0,2)
