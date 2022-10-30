@@ -33,7 +33,7 @@ class Game:
 
     def End_ining(self):
         self.game_status[1] = self.game_status[1] + self.current_situation[4]
-        self.current_situation = self.reset_runner()
+        self.current_situation = self.reset_runner
         self.current_ining = self.current_ining + 1
         if(self.current_ining > self.Max_ining):
             self.game_status[0] = 1
