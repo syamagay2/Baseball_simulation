@@ -5,7 +5,7 @@ sys.path.append(os.getcwd())
 
 from src import game
 
-thisgame = Game.Game()
+thisgame = game.Game()
 thissituation = thisgame.send_runner(0,2)
 print(thisgame.current_situation)
 
