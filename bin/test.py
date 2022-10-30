@@ -16,3 +16,6 @@ print(thisgame.current_situation)
 thissituation = thisgame.End_ining()
 print(thisgame.current_situation)
 print(thisgame.game_status)
+
+
+thisgame.restart_game()

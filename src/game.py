@@ -7,7 +7,7 @@ class Game:
 
         self.current_ining = 0
 
-        self.current_situation = [0,0,0,0,0] #[outcount,1B,2B,3B,score]
+        self.current_situation = [0,0,0,0,0] #[ining,outcount,1B,2B,3B,score]
         self.game_status = [0,0] #[countinue or End, score]
 
     def send_runner(self, target, send_num):
@@ -26,8 +26,8 @@ class Game:
     def reset_runner(self):
         return [0,0,0,0,0]
 
-    def update_outcount(self):
-        self.current_situation[0] = self.current_situation[0]+1
+    def update_outcount(self, outcount):
+        self.current_situation[0] = self.current_situation[0]+outcount
         
         return self.current_situation
 
@@ -38,4 +38,6 @@ class Game:
         if(self.current_ining > self.Max_ining):
             self.game_status[0] = 1
         return self.game_status
-    
+
+    def restart_game(self):
+        self.__init__()
