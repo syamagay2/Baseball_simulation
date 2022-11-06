@@ -3,19 +3,19 @@ print("Hello World")
 import sys,os
 sys.path.append(os.getcwd())
 
-from src import game
+from src import game,player,batting_order
 
-thisgame = game.Game()
-thissituation = thisgame.send_runner(0,2)
-print(thisgame.current_situation)
+order = batting_order.batting_order(
+    player.batter("test_1",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_2",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_3",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_4",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_5",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_6",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_7",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_8",400, 0.3, 0.3, 0.4, 0),
+    player.batter("test_9",400, 0.3, 0.3, 0.4, 0)
+)
 
-thissituation = thisgame.send_runner(2,2)
-thissituation = thisgame.send_runner(0,2)
-print(thisgame.current_situation)
-
-thissituation = thisgame.End_ining()
-print(thisgame.current_situation)
-print(thisgame.game_status)
-
-
-thisgame.restart_game()
+thisgame = game.Game(order)
+thisgame.play_Game()
